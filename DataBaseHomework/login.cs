@@ -14,7 +14,7 @@ namespace DataBaseHomework
 {
     public partial class login : Form
     {
-        string cs = "datasource=localhost;port=3312;username=root;password=raizV2toorU2;database=nossobanco;";
+        string cs = "datasource=localhost;port=3306;username=root;password=raizV2toorU2;database=nossobanco;";
 
         private void autenticaUser()
         {

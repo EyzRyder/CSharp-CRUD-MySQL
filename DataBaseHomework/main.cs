@@ -13,7 +13,7 @@ namespace DataBaseHomework
 {
     public partial class DBCShape : Form
     {
-        string connectionString = "datasource=localhost;port=3312;username=root;password=raizV2toorU2;database=nossobanco;";
+        string connectionString = "datasource=localhost;port=3306;username=root;password=raizV2toorU2;database=nossobanco;";
 
         public DBCShape()
         {
