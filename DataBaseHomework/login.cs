@@ -14,47 +14,25 @@ namespace DataBaseHomework
 {
     public partial class login : Form
     {
-        string cs = "datasource=localhost;port=3306;username=root;password=raizV2toorU2;database=nossobanco;";
+        
 
-        private void autenticaUser()
+        Usuario user = new Usuario();
+
+        private void CarregarAgenda()
         {
-            string name = textBox1.Text;
-            string paswrd = textBox4.Text;
-            string query = "SELECT * from admin where user_name = '" + name + "' and user_password = '" + paswrd + "' ";
+            user.autenticaUser(textBox1.Text, textBox4.Text);
 
-            MySqlConnection databaseConnection = new MySqlConnection(cs);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;
-
-            try
+            if (user.autenticaUser(textBox1.Text, textBox4.Text) == true)
             {
-                databaseConnection.Open();
-                reader = commandDatabase.ExecuteReader();
-                if (textBox1.Text != "" || textBox4.Text != "") { 
+                this.Visible = false;
+                DBCShape visib = new DBCShape();
+                visib.ShowDialog();
+                this.Close();
 
-                if (reader.HasRows)
-                {
-                        main_form();
-                }
-                else
-                {
-                    MessageBox.Show("Nada foi encontrado");
-                }
-            }
-                else
-                {
-                    MessageBox.Show("coloque seus dados");
-                }
-
-                databaseConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
 
         }
+
         public login()
         {
             InitializeComponent();
@@ -92,15 +70,9 @@ namespace DataBaseHomework
 
         private void button1_Click(object sender, EventArgs e)
         {
-            autenticaUser();
+            CarregarAgenda();
         }
-        private void main_form()
-        {
-            this.Visible = false;
-            DBCShape visib = new DBCShape();
-            visib.ShowDialog();
-            this.Close();
-        }
+
 
         private void login_Load(object sender, EventArgs e)
         {

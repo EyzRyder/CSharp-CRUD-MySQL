@@ -44,6 +44,7 @@ namespace DataBaseHomework
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnDelet = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBoxfrstNm
@@ -110,7 +111,7 @@ namespace DataBaseHomework
             // 
             this.btnRegister.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnRegister.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(63, 231);
+            this.btnRegister.Location = new System.Drawing.Point(58, 239);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(100, 41);
             this.btnRegister.TabIndex = 6;
@@ -122,7 +123,7 @@ namespace DataBaseHomework
             // 
             this.btnUpdateUser.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnUpdateUser.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateUser.Location = new System.Drawing.Point(216, 231);
+            this.btnUpdateUser.Location = new System.Drawing.Point(174, 239);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(136, 41);
             this.btnUpdateUser.TabIndex = 7;
@@ -170,7 +171,7 @@ namespace DataBaseHomework
             // 
             this.btnDelet.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnDelet.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelet.Location = new System.Drawing.Point(402, 231);
+            this.btnDelet.Location = new System.Drawing.Point(419, 239);
             this.btnDelet.Name = "btnDelet";
             this.btnDelet.Size = new System.Drawing.Size(100, 41);
             this.btnDelet.TabIndex = 9;
@@ -178,12 +179,25 @@ namespace DataBaseHomework
             this.btnDelet.UseVisualStyleBackColor = false;
             this.btnDelet.Click += new System.EventHandler(this.btnDelet_Click);
             // 
+            // btnListar
+            // 
+            this.btnListar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnListar.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(316, 239);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(97, 41);
+            this.btnListar.TabIndex = 10;
+            this.btnListar.Text = "Listar User";
+            this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
             // DBCShape
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(565, 312);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnDelet);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnUpdateUser);
@@ -220,6 +234,7 @@ namespace DataBaseHomework
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button btnDelet;
+        private System.Windows.Forms.Button btnListar;
     }
 }
 
